@@ -30,12 +30,13 @@ This project implements a load balancer in Java that distributes incoming reques
 
 ## Project Structure
 
-
 - **`frontend/`**: This directory contains the files related to the user interface of the application.
   - **`index.html`**: The main HTML file that provides the structure and content of the frontend.
   - **`script.js`**: A JavaScript file that handles the interactivity and communication with the backend API.
 
 - **`backend/`**: This directory contains the Java classes responsible for the load balancing logic and server management.
+  - **`/lib/`**: Contains external libraries required for the project.
+    - **`json-simple-1.1.jar`**: A JSON processing library used for handling JSON data.
   - **`BackendServer.java`**: Implements the logic for individual backend servers, including tracking active connections.
   - **`LoadBalancer.java`**: Contains the implementation of the load balancing algorithms (Round-Robin and Least Connections).
   - **`LoadBalancerAPI.java`**: Sets up a simple REST API for the frontend to interact with the load balancer and backend servers.
