@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Balancer Simulation</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { text-align: center; }
+        .controls { text-align: center; margin-bottom: 20px; }
+        .server-status { display: flex; justify-content: center; gap: 20px; }
+        .server { border: 1px solid #ccc; padding: 10px; width: 150px; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Load Balancer Simulation</h1>
+    <div class="controls">
+        <label for="algorithm">Choose Algorithm:</label>
+        <select id="algorithm">
+            <option value="round-robin">Round Robin</option>
+            <option value="least-connections">Least Connections</option>
+        </select>
+        <button onclick="sendRequest()">Send Request</button>
+    </div>
+
+    <div class="server-status" id="serverStatus">
+        <!-- Backend servers' status will be updated here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
